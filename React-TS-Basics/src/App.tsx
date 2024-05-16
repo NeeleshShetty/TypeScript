@@ -26,6 +26,10 @@ function App() {
       return [...prevGoals , newGoal]
     })
   }
+ function handleDelete(id: number) {
+		setGoals((prevGoal) => prevGoal.filter((goal) => goal.id !== id));
+ }
+
   return (
 		<>
 			<Header
@@ -36,7 +40,7 @@ function App() {
 			>
 				<h1>Your Course Goals</h1>
 				<button onClick={handleAddGoals}>Add Goals</button>
-				<CourseGoalList goals={goals}   />
+				<CourseGoalList goals={goals} onDeleteGoal={handleDelete}/>
 			</Header>
 		</>
 	);

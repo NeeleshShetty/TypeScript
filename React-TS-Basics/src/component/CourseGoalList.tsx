@@ -2,16 +2,18 @@ import CourseGoal from "./CourseGoal";
 import { type CourseGoal as CGoal } from "../App";
 
  type CourseGoalList = {
-    goals:CGoal[]
-}
+		goals: CGoal[];
+		onDeleteGoal: (id: number) => void;
+ };
 
-const CourseGoalList = ({ goals}:CourseGoalList) => {
+const CourseGoalList = ({ goals,onDeleteGoal}:CourseGoalList) => {
+
   return (
 		<>
 			<ul>
 				{goals.map((goal) => (
 					<li>
-						<CourseGoal title={goal.title}>
+						<CourseGoal id={goal.id} title={goal.title} onDelete ={onDeleteGoal}>
 							<p>{goal.description}</p>
 						</CourseGoal>
 					</li>
