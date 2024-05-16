@@ -14,9 +14,9 @@ const Header = ({image,children}:HeaderProps) => {
 				src={image.src}
 				alt={image.alt}
 			/>
-			<img
+			{/* <img
 				{...image}
-			/>
+			/> */}
 			{children}
 		</div>
 	);
