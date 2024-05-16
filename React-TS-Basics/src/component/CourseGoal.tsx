@@ -3,7 +3,7 @@
 //   description: string;
 // }
 
-import { type PropsWithChildren } from "react";
+import { type FC, type PropsWithChildren } from "react";
 
 // interface CourseGoalProps {
 // 	title: string;
@@ -12,7 +12,7 @@ import { type PropsWithChildren } from "react";
 
 type CourseGoalProps = PropsWithChildren<{title:string}>
 
-const CourseGoal = ({ title, children }: CourseGoalProps) => {
+const CourseGoal:FC<CourseGoalProps> = ({ title, children }: CourseGoalProps) => {
 	return (
 		<article>
 			<div>
