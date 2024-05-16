@@ -5,12 +5,10 @@ function App() {
   
 
   return (
-    <>
-      <CourseGoal
-        title="Learn React + Ts"
-        description="Learn it from ground up" />
-    </>
-  )
+		<>
+			<CourseGoal title="Learn React + Ts">Learn it from ground up</CourseGoal>
+		</>
+	);
 }
 
 export default App
